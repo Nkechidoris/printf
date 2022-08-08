@@ -3,6 +3,7 @@
 /**
  * reverse_str - reverses a string
  * @str: the string
+ * Return: pointer to the reversed string
  */
 char *reverse_str(char *str)
 {
@@ -14,7 +15,7 @@ char *reverse_str(char *str)
 	/* get the length of str */
 	while (str[i])
 		i++;
-	tmp = (char*)malloc(i + 1);
+	tmp = (char *)malloc(i + 1);
 	if (tmp == NULL)
 		return (0);
 	/* reverse the string */
