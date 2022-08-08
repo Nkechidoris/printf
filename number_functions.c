@@ -1,29 +1,24 @@
 #include "main.h"
 
 /**
- * num_to_str - coverts number to str
+ * unsigned_num_to_str - coverts unsigned number to str
  * @num: number
  * @base: the base
  * @buff: pointer to the string
  */
-void num_to_str(int num, int base, char *buff)
+void unsigned_num_to_str(int num, int base, char *buff)
 {
-	int res = 0, i, j, tmp;
+	int res = 0, i = 0, j, tmp;
 
-	buff = (char*)malloc(20);
+	do {
+		res = num % base;
+		if (res > 9)
+			buff[i] = res + 'a' - 10;
+		else
+			buff[i] = res + '0';
+		num /= base;
+	} while (num > 0);
 
-	for (i = 0; buff[i] != '\0'; i++)
-	{
-		while (num > 0)
-		{
-			res = num % base;
-			if (res > 9)
-				buff[i] = res + 'a' - 10;
-			else
-				buff[i] = res + '0';
-			num /= base;
-		}
-	}
 	buff[i] = '\0';
 
 	i--;
@@ -34,4 +29,22 @@ void num_to_str(int num, int base, char *buff)
 		buff[i] = tmp;
 		i--;
 	}
+}
+/**
+ * signed_num_to_str - converts signed number to string
+ * @num: number
+ * @base: the base
+ * @buff: pointer to string
+ */
+void signed_num_to_str(int64_t num, int base, char *buff)
+{
+	unit64_t n;
+
+	if (num < 0)
+	{
+		*buff++ = '-';
+		num = -num;
+	}
+	n = (unit64_t)num;
+	unsigned_num_to_str(n, base, buff);
 }
