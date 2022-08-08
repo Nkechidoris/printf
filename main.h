@@ -6,6 +6,7 @@
 #include <stdint.h>
 #include <unistd.h>
 
+int isAlpha(int c);
 int _putchar(char c);
 int _printf(const char *format, ...);
 void unsigned_num_to_str(int num, int base, char *buff);
