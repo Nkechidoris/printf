@@ -37,3 +37,20 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+/**
+ * print_str - prints a string
+ * @str: pointer to the string
+ * Return: the number of characters printed
+ */
+int print_str(char *str)
+{
+	int i = 0;
+
+	while (*str)
+	{
+		_putchar(str[i])
+		i++;
+	}
+	return (i);
+}

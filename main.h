@@ -9,6 +9,7 @@
 int isAlpha(int c);
 int isDigit(int c);
 int _putchar(char c);
+int print_str(char *str);
 int _printf(const char *format, ...);
 void unsigned_num_to_str(int num, int base, char *buff);
 void signed_num_to_str(int64_t num, int base, char *buff);
