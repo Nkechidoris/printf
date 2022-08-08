@@ -17,6 +17,7 @@ void unsigned_num_to_str(int num, int base, char *buff)
 		else
 			buff[i] = res + '0';
 		num /= base;
+		i++;
 	} while (num > 0);
 
 	buff[i] = '\0';
@@ -38,13 +39,13 @@ void unsigned_num_to_str(int num, int base, char *buff)
  */
 void signed_num_to_str(int64_t num, int base, char *buff)
 {
-	unit64_t n;
+	uint64_t n;
 
 	if (num < 0)
 	{
 		*buff++ = '-';
 		num = -num;
 	}
-	n = (unit64_t)num;
+	n = (uint64_t)num;
 	unsigned_num_to_str(n, base, buff);
 }

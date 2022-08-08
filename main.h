@@ -10,5 +10,6 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 void unsigned_num_to_str(int num, int base, char *buff);
 void signed_num_to_str(int64_t num, int base, char *buff);
+char *reverse_str(char *str);
 
 #endif /* MAIN_H */
