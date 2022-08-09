@@ -55,6 +55,9 @@ printer get_printer(char c)
 		{'c', print_char},
 		{'%', print_char},
 		{'s', print_string},
+		{'i', print_signed},
+		{'d', print_signed},
+		{'u', print_unsigned},
 		{'\0', NULL}
 	};
 

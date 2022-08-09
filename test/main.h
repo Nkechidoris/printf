@@ -14,7 +14,7 @@ typedef struct printer
 {
 	char c;
 	int (*func)(const char *, int, va_list);
-}printer;
+} printer;
 int isAlpha(int c);
 int isDigit(int c);
 int _strlen(char *s);
@@ -22,6 +22,8 @@ int _putchar(char c);
 int print_str(char *str);
 int get_index(char *s, char c);
 printer get_printer(char c);
+int print_unsigned(const char *format, int count, va_list args);
+int print_signed(const char *format, int count, va_list args);
 int print_char(const char *format, int count, va_list args);
 int print_string(const char *format, int count, va_list args);
 int _printf(const char *format, ...);
