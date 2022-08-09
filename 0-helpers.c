@@ -2,7 +2,7 @@
 
 /**
  * _isalpha - checks for alphabetic character
- *@c: the character to check
+ * @c: the character to check
  *
  * Return: 1 if c is a letter and 0 otherwise.
  */
@@ -41,7 +41,7 @@ int _strlen(char *s)
 	while (s[i] != '\0')
 	{
 		i++;
-		count++;
+		count;
 	}
 	return (count);
 }
