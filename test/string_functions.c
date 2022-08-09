@@ -49,8 +49,24 @@ int print_str(char *str)
 
 	while (*str)
 	{
-		_putchar(str[i])
+		_putchar(str[i]);
 		i++;
 	}
 	return (i);
+}
+
+/**
+ * get_index - finds an index of a char
+ * @c: key
+ * @s: haystack
+ * Return: index of c or -1
+ */
+int get_index(char *s, char c)
+{
+	int i = 0;
+
+	while (s[i])
+		if (s[i++] == c)
+			return (i - 1);
+	return (-1);
 }

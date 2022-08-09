@@ -49,7 +49,7 @@ int print_str(char *str)
 
 	while (*str)
 	{
-		_putchar(str[i])
+		_putchar(str[i]);
 		i++;
 	}
 	return (i);

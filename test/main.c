@@ -1,17 +1,10 @@
 #include "main.h"
-#include<stdio.h>
 
-int main(void)
+int main()
 {
-	char buff[30];
-	char *eg = "example";
+	_printf("%c\n", 'd');
+	_printf("%s\n", "hello world");
+	_printf("%%\n");
 
-	//testing reverse
-	printf("rev: [%s]\n", reverse_str(eg));
-
-	// Testing num to str
-	signed_num_to_str(1245, 16, buff);
-	printf("num [%s]\n", buff);
-
-	return (0);
+	return 0;
 }
