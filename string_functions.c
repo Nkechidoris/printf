@@ -71,10 +71,15 @@ int get_index(char *s, char c)
 	return (-1);
 }
 
-char _rot13(char *s)
+/**
+ * _rot13 - encodes a string using ROT13 format
+ * @s: the string
+ * Return: pointer to the new string
+ */
+char *_rot13(char *s)
 {
 	int x = 0, index;
-	char *chars = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+	char *str = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 	char *res;
 
 	if (!s)
@@ -87,12 +92,12 @@ char _rot13(char *s)
 	x = 0;
 	while (s[x])
 	{
-		index = get_index(chars, s[x]);
+		index = get_index(str, s[x]);
 		if (index > -1)
 		{
 			/* rotate */
 			index = (index + 26) % 52;
-			res[x] = chars[index];
+			res[x] = str[index];
 		}
 		else
 		{

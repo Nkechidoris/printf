@@ -18,7 +18,7 @@ typedef struct printer
 int isAlpha(int c);
 int isDigit(int c);
 int _strlen(char *s);
-char _rot13(char *s);
+char *_rot13(char *s);
 int _putchar(char c);
 int print_str(char *str);
 int get_index(char *s, char c);

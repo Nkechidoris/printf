@@ -31,7 +31,7 @@ int print_unsigned(const char *format, int count, va_list args)
 	char buff[30];
 	int retval;
 
-	num = (va_arg(args, uint64_t));
+	num = (va_arg(args, unsigned int));
 
 	if (c == 'u')
 	{
