@@ -23,9 +23,9 @@ int _printf(const char *format, ...)
 					count += 1;
 					break;
 				case 's':
-					str = (char *)(va_arg(args, char *));
+					str = (va_arg(args, char *));
 					print_str(str);
-					count += strlen(str);
+					count += _strlen(str);
 					break;
 				case '%':
 					_putchar('%');

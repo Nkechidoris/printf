@@ -47,7 +47,7 @@ int print_str(char *str)
 {
 	int i = 0;
 
-	while (*str)
+	while (str[i])
 	{
 		_putchar(str[i]);
 		i++;

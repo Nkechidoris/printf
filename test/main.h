@@ -1,13 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdlib.h>
-#include <string.h>
 #include <stdarg.h>
 #include <stdint.h>
 #include <unistd.h>
 
 int isAlpha(int c);
 int isDigit(int c);
+int _strlen(char *s);
 int _putchar(char c);
 int print_str(char *str);
 int get_index(char *s, char c);
